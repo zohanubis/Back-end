@@ -13,21 +13,35 @@
 </head>
 <body>
     <div>
-        <h2>Đăng Nhập</h2>
+        <table style="width:30%; border:2px solid blue; background-color:cornsilk; margin:auto;">
+            <tr>
+                <td colspan ="2" style="text-align:center; background-color:blue; color:white; vertical-align:middle;"><h2>THÔNG TIN ĐĂNG NHẬP</h2></td>
+            </tr>
+            <tr>
+                <td>Họ và Tên</td>
+                <td><input type="text" value="Nguyễn Hải Yến" size="30"/></td>
+            </tr>
+            <tr>
+                <td> Email</td>
+                <td> <input type ="text" value="yennh@cntp.edu.vn" size="30" /></td>
+            </tr>
+            <tr>
+                <td> Tên Đăng Nhập</td>
+                <td> <input type="text" size="30" name="name" /></td>
+            </tr>
+            <tr>
+                <td> Password</td>
+                <td> <input type="password" size="30" name ="password" /></td>
+            </tr>
+             <tr>
+                <td style="text-align:right;"><input type="checkbox" value="1"checked /></td>
+                <td>Remember Password</td>
+            </tr>
+            <tr>
+                <td colspan ="2" style="text-align:center;"><input type="submit" value="ĐĂNG NHẬP" /></td>
+            </tr>
+        </table>
 
-        <form action="~/DN/DangNhap" method="post">
-            <div>
-                <label for="userName">Tên đăng nhập:</label>
-                <input type="text" name="userName" />
-            </div>
-            <div>
-                <label for="passWord">Mật khẩu:</label>
-                <input type="password" name="passWord" />
-            </div>
-            <div>
-                <input type="submit" value="Đăng Nhập" />
-            </div>
-        </form>
     </div>
 </body>
 </html>
