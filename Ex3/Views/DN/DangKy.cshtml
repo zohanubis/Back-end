@@ -12,40 +12,43 @@
     <title>DangKy</title>
 </head>
 <body>
-    <div>
-        <table style="width:30%; border:2px solid blue; background-color:cornsilk; margin:auto;">
-            <tr>
-                <td colspan ="2" style="text-align:center; background-color:blue; color:white; vertical-align:middle;"><h2>ĐĂNG KÝ TÀI KHOẢN</h2></td>
-            </tr>
-            <tr>
-                <td>Full Name</td>
-                <td><input type="text" value="Nguyễn Hải Yến" size="30"/></td>
-            </tr>
-            <tr>
-                <td> Email</td>
-                <td> <input type ="text" value="yennh@cntp.edu.vn" size="30" /></td>
-            </tr>
-            <tr>
-                <td> Phone Number</td>
-                <td> <input type ="text" value="0908xxxxxx" size="30" /></td>
-            </tr>
-            <tr>
-                <td> User Name</td>
-                <td> <input type="text" size="30" name="name" /></td>
-            </tr>
-            <tr>
-                <td> Password</td>
-                <td> <input type="password" size="30" name="password" /></td>
-            </tr>
-         <tr>
-                <td> Retype Password</td>
-                <td> <input type="password" size="30" name="rt_password" /></td>
-            </tr>
-            <tr>
-                <td colspan ="2" style="text-align:center;"><input type="submit" value="ĐĂNG KÝ" /></td>
-            </tr>
-        </table>
+    @using (Html.BeginForm())
+    {
+        <div>
+            <table style="width:30%; border:2px solid blue; background-color:cornsilk; margin:auto;">
+                <tr>
+                    <td colspan="2" style="text-align:center; background-color:blue; color:white; vertical-align:middle;"><h2>ĐĂNG KÝ TÀI KHOẢN</h2></td>
+                </tr>
+                <tr>
+                    <td>Full Name</td>
+                    <td><input type="text" value="Nguyễn Hải Yến" size="30" /></td>
+                </tr>
+                <tr>
+                    <td> Email</td>
+                    <td> <input type="text" value="yennh@cntp.edu.vn" size="30" /></td>
+                </tr>
+                <tr>
+                    <td> Phone Number</td>
+                    <td> <input type="text" value="0908xxxxxx" size="30" /></td>
+                </tr>
+                <tr>
+                    <td> User Name</td>
+                    <td> <input type="text" size="30" name="name" /></td>
+                </tr>
+                <tr>
+                    <td> Password</td>
+                    <td> <input type="password" size="30" name="password" /></td>
+                </tr>
+                <tr>
+                    <td> Retype Password</td>
+                    <td> <input type="password" size="30" name="rt_password" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center;"><input type="submit" value="ĐĂNG KÝ" /></td>
+                </tr>
+            </table>
 
-    </div>
-</body>
+        </div>
+    }
+    </body>
 </html>

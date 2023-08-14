@@ -17,11 +17,5 @@ namespace Ex3.Controllers
             }
             return RedirectToAction("DangNhap", "DN");
         }
-
-        public ActionResult DangXuat()
-        {
-            Session.Clear();
-            return RedirectToAction("Index", "Home");
-        }
     }
 }

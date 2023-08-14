@@ -24,7 +24,7 @@ namespace Ex3.Controllers
         {
             if("yennh".Equals(name) && "123456".Equals(password))
             {
-                Session["user"] = new User() { login = name, UserName = "Phạm Hồ Đăng Huy" };
+                Session["user"] = new User() { Login = name, UserName = "Phạm Hồ Đăng Huy" };
             }
             return RedirectToAction("Index", "Home");
         }
