@@ -3,7 +3,7 @@
     Layout = null;
     ViewBag.Title = "Home Page";
 }
-
+@model Ex3.Models.User
 <!DOCTYPE html>
 
 <html>
@@ -12,17 +12,7 @@
     <title>Index</title>
 </head>
 <body>
-    <div>
-        <h2>Home Page</h2>
-
-        @if (Session["UserName"] != null)
-        {
-            <p>Welcome @Session["UserName"]</p>
-        }
-        else
-        {
-            <p>Please <a href="~/DN/DangNhap">Đăng nhập</a></p>
-        }
-    </div>
+    @{ var user = Session["user"] as User; }
+    <h2>Welcome</h2>
 </body>
 </html>
