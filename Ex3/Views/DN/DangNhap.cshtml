@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "DangNhap";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DangNhap</title>
+</head>
+<body>
+    <div>
+        <h2>Đăng Nhập</h2>
+
+        <form action="~/DN/DangNhap" method="post">
+            <div>
+                <label for="userName">Tên đăng nhập:</label>
+                <input type="text" name="userName" />
+            </div>
+            <div>
+                <label for="passWord">Mật khẩu:</label>
+                <input type="password" name="passWord" />
+            </div>
+            <div>
+                <input type="submit" value="Đăng Nhập" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -29,7 +29,7 @@ namespace Exercise1.Controllers
         {
             ViewBag.name = Request.QueryString["name"];
             ViewBag.id = Request.QueryString["id"];
-     
+            ViewBag.old = 20;
             return View();
         }
     }

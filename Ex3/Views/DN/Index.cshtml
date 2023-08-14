@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>Home Page</h2>
+
+        @if (Session["UserName"] != null)
+        {
+            <p>Welcome @Session["UserName"]</p>
+        }
+        else
+        {
+            <p>Please <a href="~/DN/DangNhap">Đăng nhập</a></p>
+        }
+    </div>
+</body>
+</html>
