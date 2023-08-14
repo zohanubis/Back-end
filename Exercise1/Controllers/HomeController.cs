@@ -25,5 +25,12 @@ namespace Exercise1.Controllers
         {
             return "ID : " + Request.QueryString["id"] + " Name = " + Request.QueryString["name"] + " Old = " + Request.QueryString["old"]; //Lay tham so tu URL
         }
+        public ActionResult Index2()
+        {
+            ViewBag.name = Request.QueryString["name"];
+            ViewBag.id = Request.QueryString["id"];
+     
+            return View();
+        }
     }
 }
