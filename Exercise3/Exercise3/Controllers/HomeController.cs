@@ -38,7 +38,7 @@ namespace Exercise3.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index_DataAnnotation(string txt_FullName, string txt_Id, string txt_Email, string File_image, string t_Note, bool Chk1, bool Chk2, bool Chk3, string opRadios, string sc)
+        public ActionResult Index(string txt_FullName, string txt_Id, string txt_Email, string File_image, string t_Note, string Chk1, string Chk2, string Chk3, string opRadios, string sc)
         {
             Session["info"] = new Information()
             {
@@ -55,6 +55,28 @@ namespace Exercise3.Controllers
 
             };
             return RedirectToAction("MHXacNhan", "Home");
+        }
+        //public ActionResult Index_DataAnnotation(string txt_FullName, string txt_Id, string txt_Email, string File_image, string t_Note, bool Chk1, bool Chk2, bool Chk3, string opRadios, string sc)
+        //{
+        //    Session["info"] = new Information()
+        //    {
+        //        FullName = txt_FullName,
+        //        IDStudent = txt_Id,
+        //        FileImage = File_image,
+        //        Email = txt_Email,
+        //        Note = t_Note,
+        //        Check1 = Chk1,
+        //        Check2 = Chk2,
+        //        Check3 = Chk3,
+        //        ChooseWorkTime = opRadios,
+        //        SelectCourse = sc
+
+        //    };
+        //    return RedirectToAction("MHXacNhan", "Home");
+        //}
+        public ActionResult MHXacNhan()
+        {
+            return View();
         }
     }
 }

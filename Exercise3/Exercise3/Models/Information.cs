@@ -23,9 +23,9 @@ namespace Exercise3.Models
         public string Email { get; set; }
         public string FileImage { get; set; }
         public string Note { get; set; }
-        public bool Check1 { get; set; }
-        public bool Check2 { get; set; }
-        public bool Check3 { get; set; }
+        public string Check1 { get; set; }
+        public string Check2 { get; set; }
+        public string Check3 { get; set; }
 
         [Required()]
         public string ChooseWorkTime { get; set; }

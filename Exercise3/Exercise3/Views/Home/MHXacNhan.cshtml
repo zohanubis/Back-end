@@ -1,0 +1,101 @@
+﻿@using Exercise3.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MHXacNhan</title>
+</head>
+<body>
+    <div>
+        <h1>ARE YOU READY YOUR INFORMATION IS CORRECT</h1>
+        @{var info = Session["info"] as Information;
+        }
+        @if (info != null)
+        {
+            <p>Your FullName is : <span style="color:red">@info.FullName</span></p>
+            <p>Your ID Student is : <span style="color:red">@info.IDStudent</span></p>
+            <p>Your Email is : <span style="color:red">@info.Email</span></p>
+            <p>Your Photo : <img src="\Assets\Image\@info.FileImage" width="20%" /></p>
+            <p>Your Note is : <span style="color:red">@info.Note</span></p>
+            <p>
+                We are known by : <span style="color:red">
+                    @{
+                        string str = "";
+                        if (info.Check1 != null)
+                        {
+                            str = "Television; ";
+                        }
+                        if (info.Check2 != null)
+                        {
+                            str += "Website; ";
+                        }
+                        if (info.Check2 != null)
+                        {
+                            str += "Newspaper; ";
+                        }
+                        @str;
+                    }
+                </span>
+            </p>
+            <p>
+                Choose Work Time : <span style="color:red">
+                    @{
+                        string str1 = "";
+                        if (info.ChooseWorkTime == "1")
+                        {
+                            str1 = "Morning (2 - 4 - 6) ";
+                        }
+                        if (info.ChooseWorkTime == "2")
+                        {
+                            str1 = "Afternoon (2 - 4 - 6) ";
+                        }
+                        if (info.ChooseWorkTime == "3")
+                        {
+                            str1 = "Morning (3 - 5 - 7) ";
+                        }
+                        if (info.ChooseWorkTime == "4")
+                        {
+                            str1 = "Afternoon (2 - 4 - 6) ";
+                        }
+                        @str1;
+                    }
+                </span>
+            </p>
+            <p>
+                Select an Course : <span style="color:red">
+                    @{
+                        string str2 = "";
+                        if (info.SelectCourse == "1")
+                        {
+                            str2 = "Html CSS Boottrap ";
+                        }
+                        if (info.SelectCourse == "2")
+                        {
+                            str2 = "JavaScript ";
+                        }
+                        if (info.SelectCourse == "3")
+                        {
+                            str2 = "WebForm ";
+                        }
+                        if (info.SelectCourse == "4")
+                        {
+                            str2 = "ASP.Net MVC ";
+                        }
+                        if (info.SelectCourse == "5")
+                        {
+                            str2 = "Web Services ";
+                        }
+                        @str2;
+                    }
+                </span>
+            </p>
+        }
+        <h3>If your information is incorrect. Please go back @Html.ActionLink("INDEX PAGE", "index")</h3>
+    </div>
+</body>
+</html>
