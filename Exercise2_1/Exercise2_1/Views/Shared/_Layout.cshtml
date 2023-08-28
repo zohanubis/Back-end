@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thử</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div id="Wrapper">
+        <div id="Header">
+            <div id="banner">
+                <img src="~/Content/images/main.jpg" />
+            </div>
+            <div id="head2">
+                <div id="Trai">
+                    <div id="menu">
+                        <ul>
+                            <li><a href="#">HOME PAGE</a></li>
+                            <li><a href="#">ABOUT US"</a></li>
+                            <li><a href="#">SERVICES"</a></li>
+                            <li><a href="#">SUPPORT"</a></li>
+                            <li><a href="#">CONTACT"</a></li>
+                        </ul>
+                    </div>
+                    <div id="welcome"><img src="~/Content/images/welcome.jpg" /></div>
+                    <div id="text">
+                        <p style="font-size:10px;">
+                            <span style="font-weight:bold;">Ea consetetur sadi lorem sed</span> <br />
+                            lorem ipsum dolor sed Consetetur pscing elitr, sed diam nonumy eirmod Dolores et ea consetetur sadi pscing elit consetetur pscing elitr, sed diam nonumy lorem ipsum dolor sed Dolores et ea consetetur sadi pscing elit consetetur pscing elitr, sed diam nonumy lorem ipsum dolor sed Consetetur pscing elitr, sed diam nonumy read more about us...
+                        </p>
+                    </div>
+                </div>
+                <div id="Phai"><img src="~/Content/images/main-12.jpg" /></div>
+            </div>
+        </div>
+        <div id="Content">
+            @RenderBody()<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+        <div id="Footer">
+
+            <a href="#">HOME</a>
+            | <a href="#">ABOUT US</a> | <a href="#">SERVICES</a>
+            | <a href="#">NEWS &amp; EVENTS</a> | <a href="#">SUPPORT</a> | <a href="#">CONTACTS</a>
+            <br>
+            Copyright © Your Company Name. Designed by <a href="http://www.cntp.edu.vn" target="_blank">YenNguyen</a><br>
+            Supported by <a href="http://www.fit.hufi.edu.vn/" target="_blank">Fit.hufi.edu.vn</a>
+
+        </div>
+    </div>
+
+</body>
+</html>

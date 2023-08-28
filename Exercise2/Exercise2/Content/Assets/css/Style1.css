@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+/* CSS Document */
+#Wrapper {
+	width: 775px;
+	
+	border:1px solid black;
+	margin:0px auto;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+		}
+#Banner
+{
+    margin:0px;
+    padding:0px;
+}
+
+#Trai {
+	width:489px;
+	height:216px;
+	background-image:url(../images/Xanh2.JPG);
+	float:left;
+	}
+	
+#menu{
+	width:489px;
+	height:42px;
+	background-image:url(../images/Menu1.JPG);	
+	font-size:12px;
+	
+	}
+#menu ul {
+	margin:0px;
+	padding:0px;}
+#menu ul li {
+	list-style:none;
+	float:left;
+	position:relative;
+	padding:15px 15px;
+	font-weight:bold;
+	color:#FFF;
+	}
+
+#menu ul li a{
+	text-decoration:none;
+	color:#FFF;
+	}
+#menu ul li a:hover{
+	color:#000;
+	}
+#welcome {
+	margin-top:3px;
+	background-image:url(../images/Xanh2.JPG);}
+#text{
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-left:45px;
+	font-size:10px;
+
+		}
+#Phai{
+	float:right;
+    margin-top:0;
+    }
+
+#Content{
+	margin-left:45px;
+	}
+#Footer{
+	padding-top:20px;
+	height:70px;
+	background-color:#CCC;
+	font-size:10px;
+	text-align:center;
+	}

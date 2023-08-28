@@ -13,5 +13,9 @@ namespace Exercise2.Controllers
         {
             return View();
         }
+        //Render Body () -> 1 lần
+        //Render Section ("name" -> Gọi nhiều lần
+        //Render Page ("page.cshmtl) -> gọi nhiều lần -> Chia nhỏ giao diện thành nhiều phần con
+        //=> Chạy 1 View Action/Controller
     }
 }
