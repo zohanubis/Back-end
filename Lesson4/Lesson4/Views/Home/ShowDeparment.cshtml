@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Lesson4.Models.Deparment>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowDepartment</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <<div class="container">
+        <h1>Show Department</h1>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <!-- Thêm màu nền đậm cho header -->
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeptId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeptId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Xem Chi tiết", "DetailDept", new { id = item.DeptId }, new { @class = "btn btn-info" }) <!-- Thêm lớp CSS cho nút -->
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+</body>
+</html>
