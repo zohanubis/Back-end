@@ -86,5 +86,26 @@ namespace Lesson4.Controllers
             ViewBag.empList = listEmp;
             return View(dept);
         }
+        //--------------------------------------------------------------
+        public ActionResult CreateEmployee() { return View(); }
+        [HttpPost]
+        public ActionResult CreateEmployee(FormCollection fc)
+        {
+            ConnectEmployee obj = new ConnectEmployee();
+            var name = fc["FullName"];
+            var gender = fc["Gender"];
+            var city = fc["City"];
+            var deptID = int.Parse(fc["DeptID"]);
+
+            int kt = obj.InsertEmployees(name, gender, city, deptID);
+            if(kt == 1)
+            {
+                ViewBag.ThongBao = "Thêm thành công";
+            }
+            else
+            {
+                ViewBag.ThongBao = "Thêm không thành công";            }
+            return View();
+        }
     }
 }

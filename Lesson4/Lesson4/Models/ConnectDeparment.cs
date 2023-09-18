@@ -114,13 +114,7 @@ namespace Lesson4.Models
             con.Close();
             return (listEmployees);
         }
-        public int InsertEmployees (string name, string gender, string city, string deptID)
-        {
-            SqlConnection con = new SqlConnection(conStr);
-            con.Open();
-            int rs = 0;
-            return rs;
-        }
+        
 
     }
 }

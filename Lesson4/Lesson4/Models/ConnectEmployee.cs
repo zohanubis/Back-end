@@ -45,6 +45,25 @@ namespace Lesson4.Models
             con.Close();
             return sl;
         }
+        public int InsertEmployees(string name, string gender, string city, int deptID)
+        {
+            SqlConnection con = new SqlConnection(conStr);
+            con.Open();
+            int rs = 0;
+            string sql1 = "SELECT COUNT(*) FROM tbl_Employee WHERE Name = '" + name + "'";
+            SqlCommand cmd1 = new SqlCommand(sql1, con);
+            int kt = (int)cmd1.ExecuteScalar();
+            if (kt == 0)
+            {
+                string sql = "INSERT INTO tbl_Employee (Name,Gender, City, DeptID)";
+                sql += "VALUES(N'" + name + "',N'" + gender + "',N'" + city + "','" + deptID + "')";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.CommandType = CommandType.Text;
+                rs = cmd.ExecuteNonQuery();
+            }
+            con.Close();
+            return rs;
+        }
     }
 
 }

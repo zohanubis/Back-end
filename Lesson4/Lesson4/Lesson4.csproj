@@ -156,6 +156,7 @@
     <Content Include="Views\Home\ShowDetailsDeparment.cshtml" />
     <Content Include="Views\Home\ShowDDLDept.cshtml" />
     <Content Include="Views\Home\ShowListEmplByDept.cshtml" />
+    <Content Include="Views\Home\CreateEmployee.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
