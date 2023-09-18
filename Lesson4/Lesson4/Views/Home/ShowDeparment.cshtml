@@ -1,9 +1,4 @@
 ﻿@model IEnumerable<Lesson4.Models.Deparment>
-
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
@@ -17,7 +12,6 @@
         <h1>Show Department</h1>
         <table class="table table-striped">
             <thead class="thead-dark">
-                <!-- Thêm màu nền đậm cho header -->
                 <tr>
                     <th>
                         @Html.DisplayNameFor(model => model.DeptId)
@@ -38,7 +32,7 @@
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
-                        @Html.ActionLink("Xem Chi tiết", "DetailDept", new { id = item.DeptId }, new { @class = "btn btn-info" }) <!-- Thêm lớp CSS cho nút -->
+                        @Html.ActionLink("Xem Chi tiết", "ShowDetailsDeparment", new { id = item.DeptId }, new { @class = "btn btn-info" }) 
                     </td>
                 </tr>
             }

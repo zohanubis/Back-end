@@ -153,6 +153,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Views\Home\ShowEmployees1.cshtml" />
     <Content Include="Views\Home\ShowDeparment.cshtml" />
+    <Content Include="Views\Home\ShowDetailsDeparment.cshtml" />
+    <Content Include="Views\Home\ShowDDLDept.cshtml" />
+    <Content Include="Views\Home\ShowListEmplByDept.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

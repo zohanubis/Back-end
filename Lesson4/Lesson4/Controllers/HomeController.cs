@@ -6,12 +6,15 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Web.Mvc;
 using Lesson4.Models;
+using System.Configuration;
 
 namespace Lesson4.Controllers
 {
     public class HomeController : Controller
     {
+        //string conCtr = ConfigurationManager.ConnectionStrings["Connect1"].ConnectionString;
         // GET: Home
+        
         public ActionResult Index()
         {
             return View();
@@ -60,6 +63,28 @@ namespace Lesson4.Controllers
             List<Deparment> empList = obj.getData();
             Session["sl"] = obj.getSL();
             return View(empList);
+        }
+        public ActionResult ShowDetailsDeparment(string id)
+        {
+            ConnectDeparment obj = new ConnectDeparment();
+            Deparment dept = obj.Details(id);
+            ViewBag.SNV = obj.SoNV(id);
+            return View(dept);
+        }
+        //------------------------------------------------------------------
+        public ActionResult ShowDDLDept()
+        {
+            ConnectDeparment obj = new ConnectDeparment();
+            List<Deparment> deptList = obj.getData();
+            return View(deptList);
+        }
+        public ActionResult ShowListEmplByDept(string id)
+        {
+            ConnectDeparment obj = new ConnectDeparment();
+            Deparment dept = obj.Details(id);
+            List<Employee> listEmp = obj.ListEmplByDept(id);
+            ViewBag.empList = listEmp;
+            return View(dept);
         }
     }
 }
